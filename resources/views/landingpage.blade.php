@@ -6,7 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Landing Page Branch Admin Karyawan</title>
     <link rel="stylesheet" href="/css/zoomslider.css">
+    <link rel="stylesheet" href="/css/css/bootstrap.min.css">
     <script style="text/javascript" src="/js/modernizr-2.6.2.min.js"></script>
+    <script style="text/javascript" src="/js/js/bootstrap.min.js"></script>
     <style>
         *{
             margin:0;
@@ -21,64 +23,48 @@
             font-family: 'Migrate';
             src: url({{ ('css/Poppins-Black.otf') }});
         }
-
         #sliderFoto{
-        height: 420px;      
-        }
-        #sliderFoto>h1{
+            min-height: 25em;
+            max-width: 100%;
             display: grid;
             place-items: center;
-            text-align: center;
-            min-width: 29%;
-            height: 3rem;
-            padding-top: 13rem;
-            color: whitesmoke;
-            font-size: 3rem;
             font-family: "Popins";
         }
-        #integrate{
-            display: grid;
-            place-items: center;
-            text-align: center;
-            min-width: 29%;
-            font-family: 'Migrate';
-            font-size: 2rem;
-            padding-top: 1em;
-        }
-        #nav{
-            display: flex;
-            flex-direction: row;
-            height: 80px;
-            align-items: center;
-        }
-        #nav>a{
-            color: black;
-            text-decoration: none;
-            width: 180px;
-            font-family: 'Popins';
-            font-size: 1.5rem;
-            text-align: center;
-            
-        }
-        
-    </style>
+           </style>
 </head>
 <body>
-   <div id="sliderFoto" data-zs-src='["{{ ('assets/2.jpg') }}","{{ ('assets/4.jpg') }}","{{ ('assets/5.jpg') }}","{{ ('assets/6.jpg') }}","{{ ('assets/7.jpg') }}"]' data-zs-bullets='false'>
-    <h1>Employee Power</h1>
-</div>
-<div id="integrate">
-    <h1>TOGETHER STRONGER</h1>
-    
-    <div id="nav">
-        <a href="#" id="api">ABOUT</a>
-        <a href="#" id="api">API</a>
+        <div class="col">
+            <div id="sliderFoto" class="container"data-zs-src='["{{ ('assets/2.jpg') }}","{{ ('assets/4.jpg') }}","{{ ('assets/5.jpg') }}","{{ ('assets/6.jpg') }}","{{ ('assets/7.jpg') }}"]' data-zs-bullets='false'>
+                <div class="container d-flex justify-content-center align-items-center text-white align-content-center">
+                    <p style="font-size: 3.5rem;">Employee Power</p>
+                </div>
+             </div>
+        </div>
+           
+    <div class="justify-content-center flex-wrap text-center justify-content-around" style="display: flex;width:100%;font-family:'Popins';background-image:linear-gradient(rgb(131, 129, 255),white)">
+        <div class="card mb-3 mt-5 bg-transparent text-light">
+            <div class="card-title pt-2" style="font-weight: bold;font-size:1.6em;">Management Data</div>
+            <div class="card-body text-center justify-content-center align-items-center d-flex" style="width: 17rem;height:23rem">
+                <div class="card-text text-dark">
+                    RESTFUL
+                </div>
+            </div>
+            <div class="card-footer bg-dark text-white">SUPER USER</div>
+        </div>
+        
+        <div class="card mb-3 mt-5 bg-transparent text-light">
+            <div class="card-title pt-2" style="font-weight: bold;font-size:1.6em;">API Localhost</div>
+            <div class="card-body text-center d-flex justify-content-center align-items-center"style="width: 17rem;height:23rem">
+                <div class="card-text text-dark">MOBILE APPS</div>           
+            </div>
+            <div class="card-footer bg-dark text-white">CROSS PLATFORM</div>
+        </div>
     </div>
+    
+<div class="modal-footer justify-content-center mt-5 bg-dark text-light">
+    All Reseved {{ date('Y'); }}
 </div>
-   
-
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script type="text/javascript" src="/js/jquery.min.js"></script>
 <script type="text/javascript" src="/js/jquery.zoomslider.min.js"></script>
 </body>
 </html>
